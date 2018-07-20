@@ -1,0 +1,21 @@
+<h3>Soru Ekle</h3>
+
+
+<div [hidden]="submitted" style="width: 300px;">
+  
+  <form (ngSubmit)="onSubmit()">
+ 
+	<div class="form-group">
+      <label for="title">Soru Başlığı</label>
+      <input type="text" class="form-control" id="title" required [(ngModel)]="soru.title" name="title">
+    </div>
+
+    <div class="form-group">
+      <label for="description">Soru</label>
+      <input type="text" class="form-control" id="description" required [(ngModel)]="soru.description" name="description">
+    </div>
+
+    <button type="submit" class="btn btn-success">Ekle</button>
+  </form>
+</div>
+
